@@ -9,7 +9,7 @@
 }
 
 body{
-    background-color: black;
+    transition: 1s;
 }
 
 .main{
@@ -19,7 +19,9 @@ body{
     justify-content: center;
     align-items: center;
 }
-
+h1{
+    padding: 20px;
+}
 .container{
     width: 30rem;
     height: 15rem;
@@ -27,4 +29,93 @@ body{
     padding: 10px;
     border-radius: 10px;
     font-size: 20px;
+    justify-content: space-between; /* Distribute items with space between */
+    align-items: center;
+    text-align: center;
 }
+
+ul {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    /* display: flex; */
+}
+
+ul li{      
+    list-style: none;
+    display: flex;
+    margin: 0 25px;
+}
+
+ul li a i{
+    font-size: 35px;
+    color: #333;
+    transition: 0.5s;
+    padding-right: 14px;
+}
+
+ul li a span{
+    color: #333;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+ul li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: 150px;
+    height: 65px;
+    background: #fff;
+    padding-left: 20px;
+    position: relative;
+    transition: 0.5s;
+}
+
+ul li a::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background: #cecece;
+    transition: 0.5s;
+    transform: skewY(-45deg)
+}
+
+ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    background: #cecece;
+    transition: 0.5s;
+    transform: skewX(-45deg);
+}
+
+ul li:hover i {
+    color: #fff;
+}
+  
+ul li:hover span {
+    color: #fff;
+}
+  
+ul li:hover a {
+    background: #dd4b39;
+    transform: translate(15px, -15px);
+    box-shadow: -50px 50px 50px rgba(96, 94, 94, 0.914);
+}
+
+ul li:hover a::before{
+    background: #b33a2b;
+}
+ul li:hover a::after{
+    background: #e66a5a;
+}
+    
+  
