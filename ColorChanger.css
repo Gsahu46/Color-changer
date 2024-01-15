@@ -25,7 +25,7 @@ h1{
 .container{
     width: 30rem;
     height: 15rem;
-    background-color: white;
+    background-color: rgb(236, 236, 236);
     padding: 10px;
     border-radius: 10px;
     font-size: 20px;
