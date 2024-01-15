@@ -13,3 +13,26 @@ document.getElementById("btn").addEventListener(
 )
 
 getColor();
+
+function copyText() {
+    // Get the text content
+    const colorcode = document.getElementById('colorcode').innerText;
+
+    // Create a temporary input element
+    const tempInput = document.createElement('textarea');
+    tempInput.value = colorcode;
+    document.body.appendChild(tempInput);
+
+    // Select the text in the input element
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999); /* For mobile devices */
+
+    // Copy the text to the clipboard
+    document.execCommand('copy');
+
+    // Remove the temporary input element
+    document.body.removeChild(tempInput);
+
+    // Optionally, provide visual feedback (you can customize this)
+    alert('Text copied to clipboard!');
+  }
