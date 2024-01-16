@@ -22,17 +22,61 @@ body{
 h1{
     padding: 20px;
 }
-.container{
-    width: 30rem;
+/* .container{
+    width: 29.5rem;
     height: 15rem;
     background-color: rgb(255, 255, 255);
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 10px; 
     font-size: 20px;
-    justify-content: space-between; /* Distribute items with space between */
+    justify-content: space-between; 
     align-items: center;
     text-align: center;
     display: flex;
+} */ 
+
+.container{
+    width: 300px;
+    height: 65px;
+    background-color: #fff;
+    font-size: 20px;
+    justify-content: space-between; 
+    align-items: center;
+    text-align: center;
+    display: flex;
+    text-decoration: none;    
+    padding-left: 20px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background: #cecece;
+    transition: 0.5s;
+    transform: skewY(-45deg)
+}
+
+.container::after{
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    height: 20px;
+    width: 100%;
+    background: #cecece;
+    transition: 0.5s;
+    transform: skewX(-45deg);
+}
+
+.fa-clipboard:before {
+    content: "\f328";
+    padding: 25px;
 }
 
 ul {
@@ -117,6 +161,22 @@ ul li:hover a::before{
 }
 ul li:hover a::after{
     background: #e66a5a;
+}
+
+/* /*------------------------------ */
+
+.container:hover span {
+    /* background: #ffffff; */
+    transition: 0.5s;
+    transform: translate(5px, -5px);
+    box-shadow: -50px 60px 50px rgba(96, 94, 94, 0.914);
+}
+
+.container:hover span::before{
+    background: #ffffff;
+}
+.container:hover span::after{
+    background: #ffffff;
 }
     
   
